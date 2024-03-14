@@ -1,0 +1,138 @@
+% !TEX TS-program = pdflatexmk
+% Template file for TeXShop by Michael Sharpe, LPPL
+\documentclass[11pt]{article} 
+\usepackage[margin=1in]{geometry} 
+\usepackage[parfill]{parskip}% Begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+%\usepackage{amssymb}% don't use with newtxmath
+\pdfmapfile{=montserrat.map}
+%SetFonts
+% libertine+newtxmath
+%\usepackage{newtxtext} % use sb in place of bold
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[scaled=.9,t,defaultfam]{montserrat}
+\usepackage{nimbusmononarrow}% narrow
+\usepackage{amsmath,amsthm}
+\usepackage[libertine,vvarbb]{newtxmath}
+% option vvarbb gives you stix blackboard bold
+%\useosf % use oldstyle figures except in math
+\usepackage[cal=boondoxo]{mathalfa}% less slanted than STIX cal
+%SetFonts
+\usepackage{booktabs}
+\title{The Montserrat Font Package}
+\author{Michael Sharpe}
+\date{\today}  % Activate to display a given date or no date
+\def\TeXShop{\TeX Shop}
+\usepackage{fonttable}
+%\renewcommand*{\familydefault}{\sfdefault}
+\usepackage{trace}
+\begin{document}
+\maketitle
+%\expandafter\show\csname lfstyle \endcsname
+%{\montserratalt fi fl ff ffi ffl}
+
+
+Montserrat is a geometric sans-serif typeface designed by  Julieta Ulanovsky, inspired by posters and signage from her historic Buenos Aires neighborhood of the same name. It is rather close in spirit to Gotham and Proxima Nova, but has its own individual appearance---more informal, less extended and more idiosyncratic. It is provided in a total of nine different weights, with upright and italic shapes, and every one of them has \textsc{Small Caps} and \textit{\textsc{Small Caps}}. There are two quite different versions that don't fit into the usual \LaTeX\ classifications. The version having the appellation Alternates has letter shapes that are much more rounded than the default version, reflecting the signage in the neighborhood of Montserrat. For example, here are the same four letters displayed in both the default and  Alternates styles: ATWl, {\montserratalt ATWl}.
+
+As it currently set up, a preamble entry of the form
+\begin{verbatim}
+\usepackage{montserrat}
+\end{verbatim}
+which should be made \textbf{after} loading the text font and \textbf{before} loading the math font, will set \verb|\sfdefault| to \verb|Montserrat|, so that \verb|\textsf{some Montserrat}| will render in that font. 
+
+There are some options that can can change the default behaviors.
+\begin{itemize}
+\item {\tt scale} (or {\tt scaled}) will cause Montserrat to render magnified by the specified scale factor.
+\item
+{\tt defaultfam} will cause \verb|\familydefault| to be set to \verb|\sfdefault|, so that Montserrat becomes the default text font for the document.
+\item {\tt alternates} will result in \verb|\sfdefault| being set to MontserratAlternates, with the rounder shapes.
+\item One of the options {\tt thin}, {\tt extralight}, {\tt light}, {\tt regular}, {\tt medium} may be specified to select the weight that should be used to render \LaTeX's {\tt regular}. (The default is {\tt regular}.)
+\item One of the options  {\tt semibold}, {\tt bold}, {\tt extrabold}, {\tt black} may be specified to select the weight that should be used to render \LaTeX's {\tt bold}. (The default is {\tt bold}.)
+\item One of the options {\tt lining}, {\tt oldstyle} (or {\tt osf}) may be specified to select the figure style. (The default is {\tt lining}.)
+\item One of the options {\tt proportional} (or {\tt p}), {\tt tabular} (or {\tt t}) may be specified to select the figure alignment. (The default is {\tt proportional}.)
+\end{itemize}
+No matter which style you choose, you may specify the other using the construction \verb|{\montserratalt ...}|. (For example, this was used at the end of the first paragraph of this document to show the alternate version of ATWl.)
+
+%The abbreviations for the weights in the {\tt fd} files are as follows.
+%
+%
+%  \begin{tabular}{@{} ll @{}}
+%    \toprule
+%    Weight & abbrev \\ 
+%    \midrule
+%    thin & t \\ 
+%    extralight & el \\ 
+%    light & l \\ 
+%    regular & m \\ 
+%    medium & mb \\ 
+%    semibold & sb \\ 
+%    bold & b \\ 
+%    extrabold & eb \\ 
+%    black & k \\ 
+%    \bottomrule
+%  \end{tabular}
+
+As of version 1.02, it is easier to remember how to obtain weights other than LaTeX's {\tt regular} and {\tt bold}, however they may be have been selected. The available weights are named as follows:\par
+{\fontseries{thin}\selectfont thin}\\
+{\fontseries{extralight}\selectfont extralight}\\
+{\fontseries{light}\selectfont light}\\
+{\fontseries{regular}\selectfont regular}\\
+{\fontseries{medium}\selectfont medium}\\
+{\fontseries{semibold}\selectfont semibold}\\
+{\fontseries{bold}\selectfont bold}\\
+{\fontseries{extrabold}\selectfont extrabold}\\
+{\fontseries{black}\selectfont black}\\
+
+
+These names be used to render text any of these weights. For example, while in a block of sans serif text, 
+\begin{verbatim}
+{\fontseries{thin}\selectfont x}
+\end{verbatim}
+will render as {\fontseries{thin}\selectfont x} in thin weight. 
+
+Montserrat has four basic figure options, plus another four at smaller size. Other than the default figure style and alignment set in the package options, access to all other possible figure options is a little complicated, and you should devise macros for any you might use regularly.
+
+  \begin{tabular}{@{} llll @{}}
+    \toprule
+    Figure spec & abbrev & example &call with \\ 
+    \midrule
+    Tabular lining & TLF & {\fontfamily{Montserrat-TLF}\selectfont 1} & \verb|{\fontfamily{Montserrat-TLF}\selectfont 1}| \\
+    Proportional lining & LF & {\fontfamily{Montserrat-LF}\selectfont 1} & \verb|{\fontfamily{Montserrat-LF}\selectfont 1}| \\
+    Tabular Oldstyle & TOsF & {\fontfamily{Montserrat-TOsF}\selectfont 1} & \verb|{\fontfamily{Montserrat-TOsF}\selectfont 1}| \\
+    Oldstyle & OsF & {\fontfamily{Montserrat-OsF}\selectfont 1} & \verb|{\fontfamily{Montserrat-OsF}\selectfont 1}| \\
+    Superiors & Sup & {\sufigures 1} & \verb|{\sufigures 1}| or \verb|\textsu{1}|\\
+    Inferiors & Inf & {\infigures 1} & \verb|{\infigures 1}|  or \verb|\textin{1}|\\
+    Numerators & Numr & {\nufigures 1} & \verb|{\nufigures 1}|  or \verb|\textnu{1}|\\
+    Denominators & Dnom & {\defigures 1} & \verb|{\defigures 1}|  or \verb|\textde{1}|\\
+    \bottomrule
+  \end{tabular}
+
+\textsc{Examples showing vertical position:}\\
+\verb|\textde{1} \textin{1}|  produces  \textde{1} \textin{1}.
+ 
+\verb|\textnu{1} \textsu{1}|  produces  \textnu{1} \textsu{1}. 
+
+
+
+\textsc{Example macro definition:}\\
+Suppose you have set your default figure style in sans serif to proportional lining. (This is the default---you need not set any options to get this.) If you wish to have the option of proportional oldstyle figures in sans serif made easier, you could modify the definitions in the {\tt.sty} file, as follows. Place the following in your preamble after loading Montserrat.
+\begin{verbatim}
+\makeatletter
+\DeclareRobustCommand{\sfosfstyle}{%
+  \not@math@alphabet\sfosfstyle\relax
+  \fontfamily{Montserrat-OsF}\selectfont %
+}
+\DeclareRobustCommand{\textsfosf}[1]{%
+  {\sfosfstyle #1}%
+\makeatother
+\end{verbatim}
+
+\section*{Usage with fontspec}
+Because the package supplies a file named {\tt montserrat.fontspec} whose contents list the {\tt otf} files that correspond to each of nine styles you may load {\tt montserrat} as the main text font with just
+\begin{verbatim}
+\usepackage{fontspec}
+\setmainfont{montserrat}
+\end{verbatim}
+This will use regular and bold weights for \LaTeX's regular and bold. If you wish other choices, you will have to suitably modify {\tt montserrat.fontspec}.
+\end{document}

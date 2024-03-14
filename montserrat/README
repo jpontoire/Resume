@@ -1,0 +1,37 @@
+The Montserrat Font Package
+--------------------------
+
+Montserrat is a geometric sans-serif typeface designed by  Julieta Ulanovsky, inspired by posters and signage from her historical Buenos Aires neighborhood of the same name. It is rather close in spirit to Gotham and Proxima Nova, but has its own individual appearance---more informal, less extended and more idiosyncratic. It is provided in a total of nine different weights, with upright and italic shapes, each having upright and italic Small Caps and eight figure styles. 
+
+The fonts are provided in OpenType and PostScript formats,are released under SIL's OFL, details of which are spelled out in the file OFL.txt accompanying the package.
+
+The TeX font metrics, font definition files and other support files for Montserrat,
+i.e., the other files in the archive montserrat.zip, may be distributed and/or modified
+under the conditions of the LaTeX Project Public License, either version 1.3 of
+this license or (at your option) any later version.  The latest version of this
+license is in http://www.latex-project.org/lppl.txt and version 1.3 or later is
+part of all distributions of LaTeX version 2003/12/01 or later. Those files and
+LaTeX support file montserrat.sty are
+
+  Copyright (c) 2017--2019 Michael Sharpe
+
+Files provided "as is", with no warranties.
+
+The support files are provided in encodings OT1, T1, TS1 and LY1 for users of Western scripts.
+
+Current version: 1.03 2019-11-07
+
+Changes in version 1.03
+1. Update the otf and pfb to the latest version of Montserrat (early 2019.)
+2. Added commands to remove all f-ligatures, which were not working as expected in small caps.
+3. Reverted the sty and  fd files in accordance with recent changes in NFSS spec.
+
+Changes in version 1.02
+Changed the sty and fd files in line with the latest NFSS weight abbreviations, and chaged documentation accordingly.
+
+Changes in version 1.01
+Corrected a number of issues with montserat.sty.
+
+Please send comments and bug reports or suggestions for improvement to
+
+msharpe at ucsd dot edu

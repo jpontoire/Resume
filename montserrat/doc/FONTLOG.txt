@@ -1,0 +1,7 @@
+FONTLOG for the Montserrat fonts
+
+Copyright (c) 2011--2016, The Montserrat Project Authors (julieta.ulanovsky@gmail.com) 
+
+https://fonts.google.com/specimen/Montserrat
+
+Version 6.0, 2016
