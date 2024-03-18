@@ -62,11 +62,12 @@
 \renewcommand{\arraystretch}{1.4}
 
 \setlength\fboxrule{0pt}
-\setlength\fboxsep{12pt}
+\setlength\fboxsep{8pt}
 % \setlength{\parskip}{.5\baselineskip plus 2pt}
 % \renewcommand{\baselinestretch}{1.1}
+\renewcommand{\baselinestretch}{0.9}
 
-\titlespacing{\section}{0pt}{0.5ex plus .1ex minus .2ex}{0.5pc}
+\titlespacing{\section}{0pt}{0.5ex plus .1ex minus .2ex}{0.2pc}
 
 \newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
 
@@ -117,7 +118,9 @@
         \vspace{.3cm}
 
         \begin{tabularx}{\textwidth}{cY}
-            & I am a curious student in computer science. I am motivated to learn new skills and and to discover the real experience of being an engineer.
+            & I am a curious student in computer \ \ \ \ science. I am motivated to learn new skills and and to discover the real 
+            
+            experience of being an engineer.
         \end{tabularx}
         
         
@@ -176,9 +179,9 @@
         \addcontentsline{toc}{section}{Languages}
         \section*{\large Languages}
         \begin{tabularx}{\textwidth}{cY}
-            \faLanguage{} & French (Mother tongue) \\
-            \faLanguage{} & English (Advanced High) \\
-            \faLanguage{} & Japanese (Beginner) \\
+            \faLanguage{} & French - Native Speaker \\
+            \faLanguage{} & English - Proficient Level \\
+            \faLanguage{} & Japanese - Beginner Level \\
         \end{tabularx}
         \vspace{.3cm}
         \\
@@ -203,11 +206,17 @@
 \fcolorbox{red}{mainbg}{%
     \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
         \color{maintext}
+        \phantomsection{}
+        {\huge \textbf{Looking for a 6 months\\assitant engineer internship \\ in Data Sciences}} \\
+        \vspace{0.2cm}
+        {\scshape\large From September 2024 to February 2025}
+        \vspace{0.4cm}
+        
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % EDUCATION
         \phantomsection{}
         \addcontentsline{toc}{section}{Education}
-        \section*{\scshape\Large Education \rule{\linewidth}{0.3pt}}
+        \section*{\scshape\Large Education \rule{\linewidth}{0.2pt}}
 %
         {\large \textbf{Engineering degree in computer science\\ 
         Université de Technologie de Compiègne (UTC)}} \\
@@ -215,8 +224,10 @@
         {Degree: Engineering degree} \ \ 
         %{GPA : } 
         \\[1ex]
+        \vspace{-\baselineskip}
+        \vspace{0.7cm}
 
-        {\large \textbf{French Baccalauréat (DEC equivalent)}} \\
+        {\large \textbf{French Baccalauréat (Secondary School Diploma)}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Lycée Boucher de Perthes, Abbeville \qquad Jul 2021} \\
         {Specialization in mathematics and Engineering Sciences} \\[1ex]
         % \\
@@ -226,39 +237,43 @@
         % EXPERIENCE
         \phantomsection{}
         \addcontentsline{toc}{section}{Experience}
-        \section*{\scshape\Large Experience \rule{\linewidth}{0.3pt}}        
+        \section*{\scshape\Large Experience \rule{\linewidth}{0.2pt}}        
 %
         {\large \textbf{Japanese culture’s club animation responsable}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Feb 2023 \textendash{} Jul 2023} 
         \begin{itemize}
-            \setlength{\itemsep}{-3pt}
+            \setlength{\itemsep}{-5pt}
             \item Responsible for Japanese cultural events every week
         \end{itemize}
 %
-        {\large \textbf{One month worker internship in Calderys Metalcasting France}}\\
+        {\large \textbf{One month worker internship in Calderys \\ Metalcasting France}}\\
         {\scshape\fontseries{light}\selectfont\footnotesize Jul 2023} 
         \begin{itemize}
-            \setlength{\itemsep}{-3pt}
+            \setlength{\itemsep}{-5pt}
             \item Worker job
             \item Reflection work on improving working conditions
         \end{itemize}
 
         \phantomsection
         \addcontentsline{toc}{section}{Projects}
-        \section*{\scshape\Large Projects \rule{\linewidth}{0.3pt}}
+        \section*{\scshape\Large Projects \rule{\linewidth}{0.2pt}}
         \setlength{\parindent}{0pt}
         {\large \textbf{Schedule website for UTC students}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Feb 2024} \\
+        \vspace{-\baselineskip}
+        \vspace{0.2cm}
         \begin{itemize}
-            \setlength{\itemsep}{-3pt}
+            \setlength{\itemsep}{-5pt}
             \item HTML/VueJS website
             \item CSS frontend and Responsive Web Design
         \end{itemize} \\
 
         {\large \textbf{Databases implementation for the administration of a fictitious clinic (PSQL, Python, UML)}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Sept 2023 \textendash{} Jan 2024} \\
+        \vspace{-\baselineskip}
+        \vspace{0.2cm}
         \begin{itemize}
-            \setlength{\itemsep}{-3pt}
+            \setlength{\itemsep}{-5pt}
             \item Databases to store the clinic’s data
             \item PSQL implementation
             \item Python application to interact  with database
@@ -266,15 +281,19 @@
 
         {\large \textbf{Expert system on the recommendation of UTC associations}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Nov 2023 \textendash{} Dec 2023} \\
+        \vspace{-\baselineskip}
+        \vspace{0.2cm}
         \begin{itemize}
-            \setlength{\itemsep}{-3pt}
+            \setlength{\itemsep}{-5pt}
             \item Creation of an expert system in LISP from the knowledge base to the inference engine
         \end{itemize}\\
         
         {\large \textbf{Reddit cartography with Gephy}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Sept 2023 \textendash{} Dec 2023} \\
+        \vspace{-\baselineskip}
+        \vspace{0.2cm}
         \begin{itemize}
-            \setlength{\itemsep}{-3pt}
+            \setlength{\itemsep}{-5pt}
             \item Using Reddit API
             \item Data filtering with Python
             \item Mapping with Gephi
@@ -282,8 +301,10 @@
 
         {\large \textbf{C Development}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Feb 2023 \textendash{} July 2023} \\
+        \vspace{-\baselineskip}
+        \vspace{0.2cm}
         \begin{itemize}
-            \setlength{\itemsep}{-3pt}
+            \setlength{\itemsep}{-5pt}
             \item Complexity \& Algorithms
             \begin{itemize}
                 \item AVL Trees, optimize algorithms, Stack, queues ...
@@ -293,8 +314,10 @@
 
         {\large \textbf{Driving school website with HTML, CSS, PHP, phpmyadmin}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Sept 2022 \textendash{} Jan 2023} \\
+        \vspace{-\baselineskip}
+        \vspace{0.2cm}
         \begin{itemize}
-            \setlength{\itemsep}{-3pt}
+            \setlength{\itemsep}{-5pt}
             \item HTML/PHP website
             \item backed by phpmyadmin databases
             \item CSS frontend
