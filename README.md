@@ -2,4 +2,4 @@
 resume made with LaTeX 
 
 # result 
-![Première page du PDF](image.png)
+![Première page du PDF](resume.png)
