@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Build CV",
+    "command": "pdflatex",
+    "args": ["-interaction=nonstopmode", "CV.tex"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+  },
+  {
+    "label": "Build Resume",
+    "command": "pdflatex",
+    "args": ["-interaction=nonstopmode", "resume.tex"],
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+  },
+  {
+    "label": "Build All",
+    "command": "./build_all.sh",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+  },
+]
