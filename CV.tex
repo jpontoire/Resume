@@ -39,7 +39,7 @@
     colorlinks=false
     ]{hyperref}
 \usepackage{lastpage}
-\usepackage{hyphenat}
+\usepackage[none]{hyphenat}
 \usepackage{hyphsubst}
 \usepackage{tabularx}
 \usepackage{moresize}
@@ -49,6 +49,7 @@
 \usepackage[scaled]{helvet}
 \usepackage{fontawesome5}
 \usepackage[defaultfam,tabular,oldstyle]{montserrat}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 
@@ -62,7 +63,7 @@
 \renewcommand{\arraystretch}{1.4}
 
 \setlength\fboxrule{0pt}
-\setlength\fboxsep{8pt}
+\setlength\fboxsep{5pt}
 % \setlength{\parskip}{.5\baselineskip plus 2pt}
 % \renewcommand{\baselinestretch}{1.1}
 \renewcommand{\baselinestretch}{0.9}
@@ -105,16 +106,15 @@
 \begin{document}
 \setlength{\topskip}{0pt}\setlength{\footskip}{0pt}%
 \fcolorbox{red}{sidebg}{%
-    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.30\textwidth-2\fboxrule-2\fboxsep\relax}
+    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.3\textwidth-2\fboxrule-2\fboxsep\relax}
         \color{sidetext}
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % DESCRIPTION
         {\bfseries\scshape\HUGE Julien} \\
         {\bfseries\scshape\Huge Pontoire}
         \vspace{.3cm} \\
-        Étudiant ingénieur, \\
-        Informatique
-        \\
+        Étudiant Ingénieur Informatique - Intelligence Artificielle et Sciences des Données
+        
         \vspace{8pt} \\
         \rule{\linewidth}{0.4pt}
         \vspace{8pt} \\        
@@ -125,17 +125,15 @@
         \section*{\large Informations personnelles}
         \vspace{.2cm}
         \begin{tabularx}{\textwidth}{cY}
-            \vspace{.3cm}
-            \faPhone{}      &  07 82 75 34 71 \\
-            \vspace{.3cm}
-            \faEnvelope{}   & \href{mailto:julien.pontoire@etu.utc.fr}{julien.pontoire@etu.utc.fr} \\
-            \faMapMarker{}  & 10 rue des lombards, 60200, 
-            
-            Compiègne \\
+            \faPhone{}      & +33 7 82 75 34 71 \\[0.3cm]
+            \faEnvelope{}   & \href{mailto:julien.pontoire@etu.utc.fr}{julien.pontoire@etu.utc.fr} \\[0.3cm]
+            \faMapMarker{}  & France, Canada
         \end{tabularx}
-        \vspace{8pt} \\
-        \rule{\linewidth}{0.4pt} \\
-        \vspace{8pt} \\
+        
+        \vspace{8pt}
+        \rule{\linewidth}{0.4pt}
+        \vspace{8pt}
+        
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % LINKS
         \phantomsection{}
@@ -144,25 +142,27 @@
         \vspace{.2cm}
         \begin{tabular}{cl}
         %    \faCode{}     & \href{https://example.com}{example.com}
-            \vspace{.3cm}
-            \faGithub{}   & \href{https://github.com/jpontoire}{https://github.com/jpontoire} \\
-            \faLinkedin{} & \href{https://www.linkedin.com/in/julien-pontoire-0a50a42b1/}{Julien Pontoire} \\
+            \faGithub{}   & \href{https://github.com/jpontoire}{github.com/jpontoire} \\[0.3cm]
+            \faLinkedin{} & \href{https://www.linkedin.com/in/julien-pontoire-0a50a42b1/}{Julien Pontoire}
         \end{tabular}
-        \vspace{8pt} \\
-        \rule{\linewidth}{0.4pt} \\
-        \vspace{8pt} \\
+        
+        \vspace{8pt}
+        \rule{\linewidth}{0.4pt}
+        \vspace{8pt}
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \phantomsection{}
-        \addcontentsline{toc}{section}{Commitments}
+        \addcontentsline{toc}{section}{Engagements}
         \section*{\large Engagements}
         \vspace{.2cm}
         \begin{tabularx}{\textwidth}{cY}
             & Élu étudiant au Conseil des Études et de la Vie Universitaire (2023 - 2025)
         \end{tabularx}
-        \vspace{8pt} \\
-        \rule{\linewidth}{0.4pt} \\
-        \vspace{8pt} \\
+        
+        \vspace{8pt}
+        \rule{\linewidth}{0.4pt}
+        \vspace{8pt}
+        
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % YOUR SKILLS
         \phantomsection{}
@@ -170,185 +170,118 @@
         \section*{\large Compétences}
         \vspace{.2cm}
         \begin{tabularx}{\textwidth}{cY}
-            \vspace{.5cm}
-            \faCode{}        & C \ \ Python \ \ Numpy \ \ Pandas \ \ HTML \ \ CSS \ \ PHP \ \ Javascript \ \ VueJS \ \ PSQL \ \ PostgreSQL \ \ R \ \ LISP \ \ Regex \ \ LaTeX \\
-            \vspace{.5cm}
-            \faCogs{}        & Debian \ \ Windows \\
-            \vspace{.5cm}
-            \faLaptopCode{}  & Visual Studio Code
-            
-            PyCharm \ \ \ RStudio \\
-            \faToolbox{}     & Git \ \ UML \ \ Phpmyadmin
+            \faCode{}        & C, Python, Rust, Java, Javascript, R, LISP \\[0.5cm]
+            \faCubes{}        & Numpy, Pandas, SkLearn, PySpark, Ollama, BeautifulSoup, HTML, CSS, PHP, VueJS, Express, SpringBoot, React, PSQL \\[0.5cm]
+            \faCogs{}        & Linux, Windows \\[0.5cm]
+            \faLaptopCode{}  & Visual Studio Code, JetBrains, RStudio \\[0.5cm]
+            \faGamepad{}     & Unreal Engine 5, Unity \\[0.5cm]
+            \faToolbox{}     & Git, Perforce, UML, Phpmyadmin
         \end{tabularx}
-        \vspace{8pt} \\
+        
+        \vspace{8pt}
         \rule{\linewidth}{0.4pt}
-        \vspace{8pt} \\
+        \vspace{8pt}
         
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % HOBBIES
-        % Change Icons here https://packages.oth-regensburg.de/ctan/fonts/fontawesome5/doc/fontawesome5.pdf
+        % LANGUAGES
         \phantomsection{}
         \addcontentsline{toc}{section}{Langues}
         \section*{\large Langues}
         \vspace{.2cm}
         \begin{tabularx}{\textwidth}{cY}
-            \vspace{.3cm}
-            \faLanguage{} & Français - Langue
-            
-            Maternelle \\
-            \vspace{.3cm}
-            \faLanguage{} & Anglais - C1 \\
-            \vspace{.3cm}
-            \faLanguage{} & Japonais - A1 \\
-        \end{tabularx}
-        \vspace{8pt} \\
+            \faLanguage{} & Français - Langue Maternelle \\[0.3cm]
+            \faLanguage{} & Anglais - C1 \\[0.3cm]
+            \faLanguage{} & Japonais - A1
+        \end{tabularx}        
         
-        %\rule{\linewidth}{0.4pt}
-        %\phantomsection
-        %\addcontentsline{toc}{section}{Hobbies}
-        %\section*{\large Hobbies}
-        %\begin{tabularx}{\textwidth}{cY}
-        %    \faGamepad{} & Jeux Vidéo \\
-        %    \faBookReader{} & Lecture \\
-        %    \faWalking{} & Sports (Tir à l'arc, Course, ...) \\
-        %\end{tabularx}
-        %\vspace{.3cm}
-        
-        \vfill
-        
-        
-    \end{minipage}
-}
+    \end{minipage}%
+}%
 \hfill
 \fcolorbox{red}{mainbg}{%
     \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.7\textwidth-2\fboxrule-2\fboxsep\relax}
+        \sloppy
         \color{maintext}
         \phantomsection{}
-        {\huge \textbf{Recherche un Stage Assistant \\ Ingénieur de 6 mois en sciences des données}} \\
+        {\LARGE \textbf{Stage Ingénieur en Sciences des Données et Intelligence Artificielle}} \\
         \vspace{0.2cm}
-        {\scshape\large De Septembre 2024 à Février 2025}
+        {\scshape\large De Février 2026 à Juillet 2026}
         \vspace{0.3cm}
         
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % EDUCATION
         \phantomsection{}
         \addcontentsline{toc}{section}{Éducation}
-        \section*{\scshape\Large Éducation \rule{\linewidth}{0.2pt}}
-%
-        {\large \textbf{Études d'ingénieur en informatique\\ 
-        Université de Technologie de Compiègne (UTC)}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Compiègne \qquad Sept 2021 \textendash{} Attendu en 2026} \\
-        {Diplôme: Diplôme d'Ingénieur} \ \ 
-        %{GPA : } 
-        \\[1ex]
-        \vspace{-\baselineskip}
-        \vspace{0.6cm}
+        \section*{\makebox[\linewidth][l]{\scshape\Large Éducation} \rule{\linewidth}{0.2pt}}
 
+        {\large \textbf{Semestre d'études à l'étranger}} \\
+        {\large \textbf{Université du Québec à Chicoutimi (UQAC)}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Chicoutimi \qquad Aout 2025 \textendash{} Décembre 2025} \\
+        {Intelligence d'affaire, Développement de jeux vidéo, Architecture parallèle, Métaheuristiques} \\[1.5ex]
+
+        {\large \textbf{Études d'ingénieur en informatique}} \\
+        {\large \textbf{Université de Technologie de Compiègne (UTC)}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Compiègne \qquad Septembre 2021 \textendash{} Attendu en 2026} \\
+        {Diplôme d'Ingénieur \textendash{ GPA: 4.63/5}} \\[1.5ex]
+        
         {\large \textbf{Baccalauréat Général}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Lycée Boucher de Perthes, Abbeville \qquad Juillet 2021} \\
-        {Spécialités Mathématiques et Sciences de l'Ingénieur} \\[1ex]
-        % \\
+        {Mention Très Bien \textendash{} Spécialités Mathématiques et Sciences de l'Ingénieur} \\[1.5ex]
 
-        
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         % EXPERIENCE
         \phantomsection{}
-        \addcontentsline{toc}{section}{Experience}
-        \section*{\scshape\Large Experience \rule{\linewidth}{0.2pt}}        
-%
-        {\large \textbf{Responsable animation d'un club sur la culture \\ japonaise}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Fevrier 2023 \textendash{} Juillet 2023} 
+        \addcontentsline{toc}{section}{Expérience}
+        \section*{\makebox[\linewidth][l]{\scshape\Large Expérience} \rule{\linewidth}{0.2pt}}
+
+        {\large \textbf{Stage assistant ingénieur au sein du médialab SciencesPo}}\\
+        {\scshape\fontseries{light}\selectfont\footnotesize Septembre 2024 \textendash{} Février 2025} 
         \begin{itemize}
-            \setlength{\itemsep}{-5pt}
-            \item Responsable d'activités sur le Japon toutes les semaines
-        \end{itemize}
-%
-        {\large \textbf{Stage ouvrier d'un mois chez Calderys \\ Metalcasting France}}\\
-        {\scshape\fontseries{light}\selectfont\footnotesize Juillet 2023} 
-        \vspace{-\baselineskip}
-        \vspace{0.2cm}
-        \begin{itemize}
-            \setlength{\itemsep}{-5pt}
-            \item Travail ouvrier
-            \item Travail de réflexion sur l'amélioration des conditions de travail
+            \setlength{\itemsep}{-2pt}
+            \item Amélioration et développement d'outils de collecte et traitement de données développés par le laboratoire
+            \item Implémentation d’algorithmes de stemming (Porter, Carry) dans une librairie Rust
+            \item Création d'algorithmes de collecte de données sur le site Reddit
+            \item Développement d'un bookmarklet pour récupérer les résultats d'une recherche sur différents moteurs de recherche
+            \item Collecte de données sur des sites de presse pour des fins de recherche scientifique
         \end{itemize}
 
         \phantomsection
         \addcontentsline{toc}{section}{Projets}
-        \section*{\scshape\Large Projets \rule{\linewidth}{0.2pt}}
-        \setlength{\parindent}{0pt}
-        {\large \textbf{Site d'emploi du temps pour les étudiants de l'UTC}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Février 2024} \\
-        \vspace{-\baselineskip}
-        \vspace{0.2cm}
-        \begin{itemize}
-            \setlength{\itemsep}{-5pt}
-            \item Création d'un site web en HTML/VueJS
-            \item CSS frontend et Responsive Web Design
-        \end{itemize} \\
+        \section*{\makebox[\linewidth][l]{\scshape\Large Projets} \rule{\linewidth}{0.2pt}}
 
-        \vspace{-\baselineskip}
-        \vspace{0.3cm}
-
-        {\large \textbf{Implémentation de bases de données pour l'administration d'une clinique fictive}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Septembre 2023 \textendash{} Janvier 2024} \\
-        \vspace{-\baselineskip}
-        \vspace{0.2cm}
+        {\large \textbf{Mise en place d'un narrateur en réalité virtuelle}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Février 2025 \textendash{} Juillet 2025} \\
         \begin{itemize}
-            \setlength{\itemsep}{-5pt}
-            \item Création de bases de données pour stocker les informations de la clinique
-            \item Implémentation en PSQL
-            \item Développement d'une application Python pour intéragir avec la base de données
-        \end{itemize}\\
+            \setlength{\itemsep}{-2pt}
+            \item Projet de recherche : développement d'un narrateur via IA générative dans une scène de réalité mixte dans le cadre de l'exposition du mémorial de l'internement et de la déportation à Compiègne.
+        \end{itemize}
 
-        {\large \textbf{Système Expert sur la recommendation d'association à l'UTC}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Novembre 2023 \textendash{} Décembre 2023} \\
-        \vspace{-\baselineskip}
-        \vspace{0.2cm}
+        {\large \textbf{Prédiction de parcours étudiants}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Février 2025 \textendash{} Juillet 2025} \\
         \begin{itemize}
-            \setlength{\itemsep}{-5pt}
-            \item Création d'un système expert en LISP de la base de faits jusqu'au moteur d'inférence
-        \end{itemize}\\
+            \setlength{\itemsep}{-2pt}
+            \item {\looseness=-1 Analyse d’un jeu de données d’enseignement supérieur pour prédire le devenir académique des étudiants.}
+            \item Application de méthodes supervisées (régression logistique, forêts aléatoires) après une ACP et exploration non supervisée.
+        \end{itemize}
+
+
+        {\large \textbf{Data Warehouse et Business Intelligence}} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Février 2025 \textendash{} Juin 2025} \\
+        \begin{itemize}
+            \setlength{\itemsep}{-2pt}
+            \item Conception d’un processus ETL (Python)
+            \item Création de pipeline de données (Snowflake)
+            \item Réalisation de tableaux de bord interactifs (Power BI)
+        \end{itemize}
         
         {\large \textbf{Cartographie de Reddit avec Gephi}} \\
         {\scshape\fontseries{light}\selectfont\footnotesize Septembre 2023 \textendash{} Décembre 2023} \\
-        \vspace{-\baselineskip}
-        \vspace{0.2cm}
         \begin{itemize}
-            \setlength{\itemsep}{-5pt}
+            \setlength{\itemsep}{-2pt}
             \item Utilisation de l'API de Reddit
             \item Filtrage des données avec Python
+            \item Classification et analyse de clusters
             \item Mise en carte avec Gephi
-        \end{itemize}\\
-
-        {\large \textbf{Développement en C}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Février 2023 \textendash{} Janvier 2024} \\
-        \vspace{-\baselineskip}
-        \vspace{0.2cm}
-        \begin{itemize}
-            \setlength{\itemsep}{-5pt}
-            \item Complexité \& Algorithmes
-            \vspace{-\baselineskip}
-            \vspace{0.2cm}
-            \begin{itemize}
-                \item Arbres AVL, optimisation d'algorithmes, piles, files ...
-            \end{itemize}
-            \item Forks, processus, pipes, syscalls, E/S ...
-        \end{itemize} \\
-
-        {\large \textbf{Site web d'auto-école avec HTML, CSS, PHP, phpmyadmin}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Septembre 2022 \textendash{} Janvier 2023} \\
-        \vspace{-\baselineskip}
-        \vspace{0.2cm}
-        \begin{itemize}
-            \setlength{\itemsep}{-5pt}
-            \item Création d'un site web en HTML/PHP
-            \item Géré à l'aide de bases de données phpmyadmin
-            \item CSS frontend
-        \end{itemize} \\
-        
-        \vfill%
-        %{\hfill\small\fontseries{extralight}\selectfont Page \thepage of \pageref{LastPage}\hfill}
+        \end{itemize}
     \end{minipage}
 }%
 \end{document}
