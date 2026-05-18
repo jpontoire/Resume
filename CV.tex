@@ -1,286 +1,192 @@
-% Clean CV/Resume Template, by Bennet B <dev@bennet.cc>
-% CC0, Public-Domain
-% 
-% Permission is hereby granted, free of charge, to any person obtaining a copy
-% of this template and associated files (the "Template"), to deal
-% in the Template without restriction, including without limitation the rights
-% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-% copies of the Template, and to permit persons to whom the Template is
-% furnished to do so, subject to the following conditions:
-%
-% The above copyright notice and this permission notice shall be included in all
-% copies or substantial portions of the Template.
-%
-% THE TEMPLATE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-% OUT OF OR IN CONNECTION WITH THE TEMPLATE OR THE USE OR OTHER DEALINGS IN THE
-% TEMPLATE.
-%
-% based on Modern CV by Habib Semouma
-% https://www.overleaf.com/latex/templates/modern-cv-slash-resume-template/vjrqdkpjckwj
-%
-% 
-\documentclass[oneside]{article}
+\documentclass[a4paper,10pt]{article}
 
-\usepackage{wallpaper}
 \usepackage{geometry}
-\usepackage[
-    unicode=true,
-    bookmarks=true,
-    bookmarksnumbered=false,
-    bookmarksopen=true,
-    bookmarksopenlevel=1,
-    breaklinks=false,
-    pdfborder={0 0 0},
-    backref=false,
-    colorlinks=false
-    ]{hyperref}
-\usepackage{lastpage}
-\usepackage[none]{hyphenat}
-\usepackage{hyphsubst}
+\geometry{a4paper, top=0.55in, bottom=0.55in, left=0.6in, right=0.6in}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
 \usepackage{tabularx}
-\usepackage{moresize}
-\usepackage[document]{ragged2e}
-% \usepackage{parskip}
-
-\usepackage[scaled]{helvet}
-\usepackage{fontawesome5}
-\usepackage[defaultfam,tabular,oldstyle]{montserrat}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+\usepackage{fontawesome5}
+\usepackage{microtype}
 
-\usepackage{titlesec}
-\usepackage{xcolor}
-\usepackage{tikz}
+% Palette
+\definecolor{light-grey}{gray}{0.75}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 \setlength{\parindent}{0pt}
-\titleformat{\section}{\normalfont}{}{0pt}{}
 
-\renewcommand{\arraystretch}{1.4}
+% Sections : bold, casse normale, règle fine
+\titleformat{\section}{
+    \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[{\color{light-grey}\titlerule[0.8pt]} \vspace{-4pt}]
+\titlespacing{\section}{0pt}{10pt}{6pt}
 
-\setlength\fboxrule{0pt}
-\setlength\fboxsep{5pt}
-% \setlength{\parskip}{.5\baselineskip plus 2pt}
-% \renewcommand{\baselinestretch}{1.1}
-\renewcommand{\baselinestretch}{0.9}
+% Commandes CV
+\newcommand{\cvItem}[1]{
+  \item\small{{#1 \vspace{-1pt}}}
+}
 
-\titlespacing{\section}{0pt}{0.5ex plus .1ex minus .2ex}{0.2pc}
+\newcommand{\cvEntry}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{\small #3} & {\color{dark-grey}\small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
 
-\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcommand{\cvProject}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
 
-% Change PDF Meta Info here
+\renewcommand\labelitemi{$\bullet$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\cvListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvListEnd}{\end{itemize}}
+\newcommand{\cvItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\cvItemListEnd}{\end{itemize}\vspace{2pt}}
+
+\color{text-grey}
+
 \hypersetup{
     pdftitle={Julien Pontoire - CV - Français},
     pdfauthor={Julien Pontoire},
     pdfsubject={CV}
 }
 
-% Paper size
-\geometry{
-    a4paper,
-    left=0pt,
-    right=0pt,
-    top=0pt,
-    bottom=0pt,
-    nohead,
-    % includefoot,
-    nomarginpar
-}
-
-% Background Color of the Sidebar Column
-\definecolor{sidebg}{cmyk}{1, 0.02, 0, 0.56}
-% Background Color of the Main Column
-\definecolor{mainbg}{cmyk}{0, 0, 0.07, 0.04}
-
-% Text Color of the Main Column
-\definecolor{maintext}{cmyk}{1, 0.02, 0, 0.8}
-% Text Color of the Sidebar Column
-\definecolor{sidetext}{cmyk}{0, 0, 0.07, 0.04}
-
-\pagecolor{mainbg}
-
+%-------------------------------------------
 \begin{document}
-\setlength{\topskip}{0pt}\setlength{\footskip}{0pt}%
-\fcolorbox{red}{sidebg}{%
-    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.3\textwidth-2\fboxrule-2\fboxsep\relax}
-        \color{sidetext}
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % DESCRIPTION
-        {\bfseries\scshape\HUGE Julien} \\
-        {\bfseries\scshape\Huge Pontoire}
-        \vspace{.3cm} \\
-        Ingénieur Informatique - Intelligence Artificielle et Sciences des Données
-        
-        \vspace{8pt} \\
-        \rule{\linewidth}{0.4pt}
-        \vspace{8pt} \\        
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % PERSONAL INFROMATION
-        \phantomsection{}
-        \addcontentsline{toc}{section}{Informations personnelles}
-        \section*{\large Informations personnelles}
-        \vspace{.2cm}
-        \begin{tabularx}{\textwidth}{cY}
-            \faPhone{}      & +33 7 82 75 34 71 \\[0.3cm]
-            \faEnvelope{}   & \href{mailto:pontoirejulien@gmail.com}{pontoirejulien@gmail.com} \\[0.3cm]
-            \faMapMarker{}  & France
-        \end{tabularx}
-        
-        \vspace{8pt}
-        \rule{\linewidth}{0.4pt}
-        \vspace{8pt}
-        
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % LINKS
-        \phantomsection{}
-        \addcontentsline{toc}{section}{Liens}
-        \section*{\large Liens}
-        \vspace{.2cm}
-        \begin{tabular}{cl}
-        %    \faCode{}     & \href{https://example.com}{example.com}
-            \faGithub{}   & \href{https://github.com/jpontoire}{github.com/jpontoire} \\[0.3cm]
-            \faLinkedin{} & \href{https://www.linkedin.com/in/julien-pontoire-0a50a42b1/}{Julien Pontoire}
-        \end{tabular}
-        
-        \vspace{8pt}
-        \rule{\linewidth}{0.4pt}
-        \vspace{8pt}
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \phantomsection{}
-        \addcontentsline{toc}{section}{Engagements}
-        \section*{\large Engagements}
-        \vspace{.2cm}
-        \begin{tabularx}{\textwidth}{cY}
-            & Élu étudiant au Conseil des Études et de la Vie Universitaire (2023 - 2025)
-        \end{tabularx}
-        
-        \vspace{8pt}
-        \rule{\linewidth}{0.4pt}
-        \vspace{8pt}
-        
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % YOUR SKILLS
-        \phantomsection{}
-        \addcontentsline{toc}{section}{Compétences}
-        \section*{\large Compétences}
-        \vspace{.2cm}
-        \begin{tabularx}{\textwidth}{cY}
-            \faCode{}        & C, Python, Rust, Java, Javascript, R, LISP \\[0.5cm]
-            \faCubes{}        & Numpy, Pandas, SkLearn, PySpark, Ollama, BeautifulSoup, HTML, CSS, PHP, VueJS, Express, SpringBoot, React, PSQL \\[0.5cm]
-            \faCogs{}        & Linux, Windows \\[0.5cm]
-            \faLaptopCode{}  & Visual Studio Code, JetBrains, RStudio \\[0.5cm]
-            \faGamepad{}     & Unreal Engine 5, Unity \\[0.5cm]
-            \faToolbox{}     & Git, Perforce, UML, Phpmyadmin
-        \end{tabularx}
-        
-        \vspace{8pt}
-        \rule{\linewidth}{0.4pt}
-        \vspace{8pt}
-        
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % LANGUAGES
-        \phantomsection{}
-        \addcontentsline{toc}{section}{Langues}
-        \section*{\large Langues}
-        \vspace{.2cm}
-        \begin{tabularx}{\textwidth}{cY}
-            \faLanguage{} & Français - Langue Maternelle \\[0.3cm]
-            \faLanguage{} & Anglais - C1 \\[0.3cm]
-            \faLanguage{} & Japonais - A1
-        \end{tabularx}        
-        
-    \end{minipage}%
-}%
-\hfill
-\fcolorbox{red}{mainbg}{%
-    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.7\textwidth-2\fboxrule-2\fboxsep\relax}
-        \sloppy
-        \color{maintext}
-        \phantomsection{}
-        {\LARGE \textbf{Ingénieur Data Science \& Intelligence Artificielle}} \\
-        \vspace{0.2cm}
-        {\scshape\large Diplôme d'Ingénieur \textendash{} Novembre 2026}
-        \vspace{0.3cm}
-        
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % EDUCATION
-        \phantomsection{}
-        \addcontentsline{toc}{section}{Éducation}
-        \section*{\makebox[\linewidth][l]{\scshape\Large Éducation} \rule{\linewidth}{0.2pt}}
+%----------EN-TÊTE----------
+\begin{center}
+	{\Huge \textbf{Julien Pontoire}} \\ \vspace{4pt}
+	{\large Ingénieur Data Science \& Intelligence Artificielle} \\ \vspace{4pt}
+	{\small Ingénieur UTC 2026 · Stage de fin d'études chez Airbus Defence and Space · Agents IA en contexte industriel} \\
+	{\small Disponible dès septembre 2026} \\ \vspace{6pt}
+	\small
+	\faMapMarker* \hspace{2pt} France \hspace{4pt} $|$ \hspace{4pt}
+	\faEnvelope \hspace{2pt} \href{mailto:pontoirejulien@gmail.com}{pontoirejulien@gmail.com} \hspace{4pt} $|$ \hspace{4pt}
+	\faPhone* \hspace{2pt} +33~7~82~75~34~71 \hspace{4pt} $|$ \hspace{4pt}
+	\faGithub \hspace{2pt} \href{https://github.com/jpontoire}{github.com/jpontoire} \hspace{4pt} $|$ \hspace{4pt}
+	\faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/julien-pontoire-0a50a42b1/}{Julien Pontoire}
+\end{center}
 
-        {\large \textbf{Semestre d'études à l'étranger}} \\
-        {\large \textbf{Université du Québec à Chicoutimi (UQAC)}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Chicoutimi \qquad Aout 2025 \textendash{} Décembre 2025} \\
-        {Intelligence d'affaire, Développement de jeux vidéo, Architecture parallèle, Métaheuristiques} \\[1.5ex]
+%-----------EXPÉRIENCE-----------
+\section{Expérience}
+\cvListStart
 
-        {\large \textbf{Études d'ingénieur en informatique}} \\
-        {\large \textbf{Université de Technologie de Compiègne (UTC)}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Compiègne \qquad Septembre 2021 \textendash{} Attendu en 2026} \\
-        {Diplôme d'Ingénieur \textendash{ GPA: 4.63/5}} \\[1.5ex]
-        
-        {\large \textbf{Baccalauréat Général}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Lycée Boucher de Perthes, Abbeville \qquad Juillet 2021} \\
-        {Mention Très Bien \textendash{} Spécialités Mathématiques et Sciences de l'Ingénieur} \\[1.5ex]
+\cvEntry
+{Stage Ingénieur IA \textemdash{} Airbus Defence and Space}{Février 2026 -- Juillet 2026}
+{Automatisation de workflows · Agents LLM · Ingénierie logicielle}{France}
+\cvItemListStart
+\cvItem{\textbf{Outils IA open source :} déploiement en environnement industriel (OpenCode, OpenClaw)}
+\cvItem{\textbf{Langage de prompting :} développement pour l'automatisation de tâches d'ingénierie logicielle}
+\cvItem{\textbf{Agent autonome :} analyse des issues Jira et proposition automatique de corrections de code sous forme de Pull Requests GitLab pour revue par les développeurs}
+\cvItemListEnd
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        % EXPERIENCE
-        \phantomsection{}
-        \addcontentsline{toc}{section}{Expérience}
-        \section*{\makebox[\linewidth][l]{\scshape\Large Expérience} \rule{\linewidth}{0.2pt}}
+\cvEntry
+{Stage Assistant Ingénieur \textemdash{} Médialab SciencesPo}{Septembre 2024 -- Février 2025}
+{Collecte et traitement de données}{Paris, France}
+\cvItemListStart
+\cvItem{Amélioration et développement d'outils de collecte et traitement de données du laboratoire}
+\cvItem{\textbf{Rust :} implémentation d'algorithmes de stemming (Porter, Carry) dans une librairie}
+\cvItem{Création d'algorithmes de collecte de données (Reddit, sites de presse) pour la recherche scientifique}
+\cvItem{Développement d'un bookmarklet pour agréger les résultats de différents moteurs de recherche}
+\cvItemListEnd
 
-        {\large \textbf{Stage Ingénieur IA \textendash{} Airbus Defence and Space}}\\
-        {\scshape\fontseries{light}\selectfont\footnotesize Février 2026 \textendash{} Juillet 2026}
-        \begin{itemize}
-            \setlength{\itemsep}{-2pt}
-            \item Déploiement d'outils IA open source en environnement industriel (OpenCode, OpenClaw)
-            \item Développement d'un langage de prompting pour l'automatisation de tâches d'ingénierie logicielle
-            \item Conception d'un agent autonome analysant les issues Jira et proposant automatiquement des corrections de code sous forme de Pull Requests GitLab pour revue par les développeurs
-        \end{itemize}
+\cvListEnd
 
-        {\large \textbf{Stage assistant ingénieur au sein du médialab SciencesPo}}\\
-        {\scshape\fontseries{light}\selectfont\footnotesize Septembre 2024 \textendash{} Février 2025}
-        \begin{itemize}
-            \setlength{\itemsep}{-2pt}
-            \item Amélioration et développement d’outils de collecte et traitement de données développés par le laboratoire
-            \item Implémentation d’algorithmes de stemming (Porter, Carry) dans une librairie Rust
-            \item Création d’algorithmes de collecte de données (Reddit, sites de presse) pour la recherche scientifique
-            \item Développement d’un bookmarklet pour agréger les résultats de différents moteurs de recherche
-        \end{itemize}
+%-----------PROJETS-----------
+\section{Projets}
+\cvListStart
 
-        \phantomsection
-        \addcontentsline{toc}{section}{Projets}
-        \section*{\makebox[\linewidth][l]{\scshape\Large Projets} \rule{\linewidth}{0.2pt}}
+\cvProject{Narrateur en réalité virtuelle via IA générative}{Février -- Juillet 2025}
+\cvItemListStart
+\cvItem{Projet de recherche : développement d'un narrateur via IA générative dans une scène de réalité mixte dans le cadre de l'exposition du mémorial de l'internement et de la déportation à Compiègne}
+\cvItemListEnd
 
-        {\large \textbf{Mise en place d'un narrateur en réalité virtuelle}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Février 2025 \textendash{} Juillet 2025} \\
-        \begin{itemize}
-            \setlength{\itemsep}{-2pt}
-            \item Projet de recherche : développement d'un narrateur via IA générative dans une scène de réalité mixte dans le cadre de l'exposition du mémorial de l'internement et de la déportation à Compiègne.
-        \end{itemize}
+\cvProject{Prédiction de parcours étudiants}{Février -- Juillet 2025}
+\cvItemListStart
+\cvItem{Analyse d'un jeu de données d'enseignement supérieur pour prédire le devenir académique des étudiants}
+\cvItem{Application de méthodes supervisées (régression logistique, forêts aléatoires) après une ACP et exploration non supervisée}
+\cvItemListEnd
 
-        {\large \textbf{Prédiction de parcours étudiants}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Février 2025 \textendash{} Juillet 2025} \\
-        \begin{itemize}
-            \setlength{\itemsep}{-2pt}
-            \item {\looseness=-1 Analyse d’un jeu de données d’enseignement supérieur pour prédire le devenir académique des étudiants.}
-            \item Application de méthodes supervisées (régression logistique, forêts aléatoires) après une ACP et exploration non supervisée.
-        \end{itemize}
+\cvProject{Data Warehouse et Business Intelligence}{Février -- Juin 2025}
+\cvItemListStart
+\cvItem{Conception d'un processus ETL (Python)}
+\cvItem{Création de pipeline de données (Snowflake)}
+\cvItem{Réalisation de tableaux de bord interactifs (Power BI)}
+\cvItemListEnd
 
+\cvProject{Cartographie de Reddit avec Gephi}{Septembre -- Décembre 2023}
+\cvItemListStart
+\cvItem{Collecte de données via l'API Reddit, filtrage et traitement Python, analyse de clusters, visualisation de réseau avec Gephi}
+\cvItemListEnd
 
-        {\large \textbf{Data Warehouse et Business Intelligence}} \\
-        {\scshape\fontseries{light}\selectfont\footnotesize Février 2025 \textendash{} Juin 2025} \\
-        \begin{itemize}
-            \setlength{\itemsep}{-2pt}
-            \item Conception d’un processus ETL (Python)
-            \item Création de pipeline de données (Snowflake)
-            \item Réalisation de tableaux de bord interactifs (Power BI)
-        \end{itemize}
-        
-    \end{minipage}
-}%
+\cvListEnd
+
+%-----------FORMATION-----------
+\section{Formation}
+\cvListStart
+
+\cvEntry
+{Université de Technologie de Compiègne (UTC)}{2021 -- 2026}
+{Diplôme d'Ingénieur Informatique \textemdash{} GPA : 4.63/5}{Compiègne, France}
+\cvItemListStart
+\cvItem{\textbf{Engagement :} Élu étudiant au Conseil des Études et de la Vie Universitaire (2023 -- 2025)}
+\cvItemListEnd
+
+\cvEntry
+{Université du Québec à Chicoutimi (UQAC)}{Août -- Décembre 2025}
+{Semestre d'échange à l'international}{Chicoutimi, Canada}
+\cvItemListStart
+\cvItem{Intelligence d'affaire, Développement de jeux vidéo, Architecture parallèle, Métaheuristiques}
+\cvItemListEnd
+
+\cvEntry
+{Baccalauréat Général}{Juillet 2021}
+{Mention Très Bien \textemdash{} Spécialités Mathématiques et Sciences de l'Ingénieur}{Lycée Boucher de Perthes, Abbeville}
+
+\cvListEnd
+
+%-----------COMPÉTENCES-----------
+\section{Compétences Techniques}
+\begin{itemize}[leftmargin=0in, label={}]
+	\small{\item{
+		            \textbf{IA \& Data Science :} Python, NumPy, Pandas, Scikit-learn, PySpark, Ollama, BeautifulSoup, Agents LLM \vspace{2pt} \\
+		            \textbf{Développement logiciel :} Rust, Java, C, JavaScript (VueJS, React, SpringBoot), R, LISP \vspace{2pt} \\
+		            \textbf{Données \& BI :} PostgreSQL, Snowflake, phpMyAdmin, Power BI, ETL, Gephi \vspace{2pt} \\
+		            \textbf{Outils :} Git, Perforce, Linux, Visual Studio Code, JetBrains, RStudio, Unreal Engine 5, Unity
+		      }}
+\end{itemize}
+
+%-----------LANGUES-----------
+\section{Langues}
+\begin{itemize}[leftmargin=0in, label={}]
+	\small{\item{
+		            \textbf{Français :} Langue maternelle \hspace{8pt}
+		            \textbf{Anglais :} C1 \hspace{8pt}
+		            \textbf{Japonais :} A1
+		      }}
+\end{itemize}
+
+%-------------------------------------------
 \end{document}
