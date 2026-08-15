@@ -1,7 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 
 \usepackage{geometry}
-\geometry{a4paper, top=0.55in, bottom=0.55in, left=0.6in, right=0.6in}
+\geometry{a4paper, top=0.4in, bottom=0.4in, left=0.6in, right=0.6in}
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
@@ -32,7 +32,7 @@
 \titleformat{\section}{
     \bfseries \vspace{2pt} \raggedright \large
 }{}{0em}{}[{\color{light-grey}\titlerule[0.8pt]} \vspace{-4pt}]
-\titlespacing{\section}{0pt}{10pt}{6pt}
+\titlespacing{\section}{0pt}{7pt}{4pt}
 
 \newcommand{\cvItem}[1]{
   \item\small{{#1 \vspace{-1pt}}}
@@ -120,7 +120,7 @@
 \cvProject{AI Personal Training Assistant (RAG + Fine-tuning + Agent)}{August 2026}
 \cvItemListStart
 \cvItem{LangGraph agent orchestrating RAG (ChromaDB) and a fine-tuned model (Qwen 2.5, LoRA/QLoRA) to generate personalized training programs, with validated structured output (Pydantic) and retry logic}
-\cvItem{REST API (FastAPI) and interface (Streamlit)}
+\cvItem{REST API (FastAPI) and interface (Streamlit), deployed on Google Cloud Run with a multi-service architecture (Secret Manager, user API key management)}
 \cvItemListEnd
 
 \cvProject{VR Narrator with Generative AI}{February -- July 2025}
@@ -167,7 +167,7 @@
         \textbf{AI \& Data Science:} LLM Agents, Prompting, MCP, Promptfoo, Ollama, Python, NumPy, Pandas, Scikit-learn, PySpark, BeautifulSoup, PyTorch, LangChain, LangGraph, RAG, Fine-tuning (LoRA/QLoRA), Hugging Face (Transformers, PEFT, TRL), ChromaDB, Qdrant, FastAPI, Pydantic \vspace{2pt} \\
         \textbf{Software development:} Rust, Java, C, JavaScript (VueJS, React, SpringBoot), Bash \vspace{2pt} \\
         \textbf{Data \& BI:} PostgreSQL, Snowflake, phpMyAdmin, Power BI, ETL, Gephi \vspace{2pt} \\
-        \textbf{DevOps \& Tools:} Git, GitLab / CI-CD, Docker, Linux, VS Code, JetBrains
+        \textbf{DevOps \& Tools:} Git, GitLab / CI-CD, Docker, Linux, VS Code, JetBrains, Google Cloud Platform (Cloud Run, Artifact Registry, Secret Manager)
     }}
 \end{itemize}
 
